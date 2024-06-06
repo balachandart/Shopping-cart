@@ -11,7 +11,7 @@ export const Home = () => {
 
       {
         products.map((product)=>( 
-            <Product key={product.id} product={product} count={product.pcount}
+            <Product key={product.id} product={product} 
              />
       ))}
 

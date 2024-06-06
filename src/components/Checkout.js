@@ -19,12 +19,15 @@ const Checkout = () => {
               <p>Price Rs: {parseFloat(product.amt).toFixed(2)}</p>
               <p>Quantity: {product.count}</p>
               <p>Subtotal: Rs: {(parseFloat(product.amt) * product.count).toFixed(2)}</p>
+              <p>Hotel   : {product.shop}</p>
+              
+              
             </div>
           </div>
         ))}
       </div>
       <h2 className="checkout-total">Total Amount ₹: {total.toFixed(2)} Only</h2>
-      <h4><button>Proceed to Payment</button></h4>
+      <h4><button style={{cursor:"none"}}>Proceed to Payment</button></h4>
     </div>
   );
 }

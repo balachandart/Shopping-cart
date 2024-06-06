@@ -7,15 +7,15 @@ const Product = ({ product }) => {
   const [count, setCount] = useState(0); 
 
   const addCart = () => {
-    // Check if the product is already in the cart
+    //check the product is already in the cart
     if (!cart.find(item => item.id === product.id)) {
       setCart([...cart, { ...product, count }]);
     }
-    setCount(1); 
+    setCount(count); 
   };
 
   const removeCart = () => {
-    setCart(cart.filter((c) => c.id !== product.id));
+    setCart(cart.filter((cart) => cart.id !== product.id));
   };
 
   const handlePlus = () => {
@@ -28,7 +28,7 @@ const Product = ({ product }) => {
     }
   };
 
-  const name = product.name.length > 21 ? product.name.substring(0, 20) + ".." : product.name;
+  const name = product.name.length > 20 ? product.name.substring(0, 20) + ".." : product.name;
 
   return (
     <div className='product'>

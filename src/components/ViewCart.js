@@ -4,7 +4,7 @@ import { cartContext } from '../App';
 import { Link } from 'react-router-dom';
 
 export const ViewCart = () => {
-  const { cart, total } = useContext(cartContext);
+  const { cart } = useContext(cartContext);
 
   return (
     <>
@@ -24,7 +24,7 @@ export const ViewCart = () => {
           </div>
         ))}
       </div>
-      <h2 className='cart-amt'>Total Amount ₹: {total.toFixed(2)} Only</h2>
+      {/* <h2 className='cart-amt'>Total Amount ₹: {total.toFixed(2)} Only</h2> */}
       <Link to='/checkout'><button className='checkout'>Proceed to Checkout</button></Link>
     </>
   );

@@ -13,7 +13,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [products] = useState(data);
 
-  // View cart
+  // checkout
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -29,6 +29,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<ViewCart />} />
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="*" element={<Home />}/>
           </Routes>
         </div>
       </BrowserRouter>
